@@ -1,16 +1,20 @@
 require 'spec_helper'
 # As a user, I want to be able to sign in and out of the Blocipedia.
-feature "User sign out" do
+feature "User signs out" do
 
   scenario "user want to end the session" do
+    user = FactoryGirl.create :user
     visit new_user_session_path
-    fill_in 'Email', :with => 'user@example.com'
-    fill_in 'Password', :with => 'password'
+    fill_in 'Email', :with => user.email
+    fill_in 'Password', :with => user.password
     click_on 'Sign in'
-    save_and_open_page
+    
+   
+
     click_link 'Sign out'
 
+    expect(page).to have_content "Signed out successfully"
   end
     
-  #expect(page).to have_content 'Welcome! You have sign in succesfully'
+  
 end
