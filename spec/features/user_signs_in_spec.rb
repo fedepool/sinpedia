@@ -12,6 +12,5 @@ feature "User signs in" do
     
     expect(page).to have_content 'Signed in successfully'
   end
-
 end
 

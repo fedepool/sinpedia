@@ -36,11 +36,13 @@ group :development, :test do
   gem 'capybara'
   gem 'launchy'
   gem 'factory_girl_rails'
+  gem 'selenium-webdriver'
+
 
 end
 
 gem 'jquery-rails'
-
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

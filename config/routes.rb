@@ -3,6 +3,7 @@ Sinpedia::Application.routes.draw do
 
 
   resources :wikis
+  resources :charges
   
   root :to => "home#index"
   # See how all your routes lay out with "rake routes"
